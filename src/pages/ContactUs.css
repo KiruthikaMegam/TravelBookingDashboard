@@ -1,0 +1,692 @@
+/* =====================================================
+   CONTACT PAGE
+===================================================== */
+
+.contact-page {
+  min-height: 100vh;
+  background: #f7f7fb;
+  color: #20212a;
+}
+
+.contact-content {
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.contact-header {
+  margin-bottom: 25px;
+}
+
+.contact-header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact-page-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  background: #eeeafd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-page-icon img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.contact-header h1 {
+  margin: 0 0 5px;
+  font-size: 28px;
+  font-weight: 750;
+}
+
+.contact-header p {
+  margin: 0;
+  color: #7b7e90;
+  font-size: 14px;
+}
+
+/* =====================================================
+   SUCCESS TOAST
+===================================================== */
+
+.contact-success-toast {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 14px 16px;
+  background: #ffffff;
+  border: 1px solid #cfeee0;
+  border-left: 4px solid #22a06b;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-sizing: border-box;
+  box-shadow: 0 8px 25px rgba(34, 160, 107, 0.08);
+}
+
+.contact-success-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #e7f8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-success-icon img {
+  width: 19px;
+  height: 19px;
+  object-fit: contain;
+}
+
+.contact-success-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.contact-success-text strong {
+  display: block;
+  color: #237853;
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+
+.contact-success-text span {
+  display: block;
+  color: #6f7582;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.contact-success-close {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: transparent;
+  border-radius: 7px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-success-close:hover {
+  background: #f3f2f7;
+}
+
+.contact-success-close img {
+  width: 15px;
+  height: 15px;
+}
+
+/* =====================================================
+   CONTACT INFO CARDS
+===================================================== */
+
+.contact-info-cards {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.contact-info-card {
+  flex: 1;
+  min-width: 0;
+  background: #ffffff;
+  border: 1px solid #e8e6ef;
+  border-radius: 18px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-sizing: border-box;
+  transition: 0.25s ease;
+}
+
+.contact-info-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(55, 13, 198, 0.07);
+}
+
+.contact-info-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 13px;
+  background: #eeeafd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-info-icon img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.contact-info-card span {
+  display: block;
+  color: #898b99;
+  font-size: 11px;
+  margin-bottom: 5px;
+}
+
+.contact-info-card strong {
+  display: block;
+  color: #30313d;
+  font-size: 14px;
+  margin-bottom: 4px;
+  word-break: break-word;
+}
+
+.contact-info-card small {
+  display: block;
+  color: #999ba8;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+/* =====================================================
+   MAIN SECTION
+===================================================== */
+
+.contact-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.contact-form-card,
+.contact-faq-card {
+  background: #ffffff;
+  border: 1px solid #e8e6ef;
+  border-radius: 20px;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+.contact-form-card {
+  flex: 1.6;
+  min-width: 0;
+}
+
+.contact-faq-card {
+  flex: 1;
+  min-width: 0;
+}
+
+/* =====================================================
+   CARD HEADING
+===================================================== */
+
+.contact-card-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.contact-card-heading h2 {
+  margin: 0 0 5px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.contact-card-heading p {
+  margin: 0;
+  color: #858797;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.contact-form-heading-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  background: #eeeafd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-form-heading-icon img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.contact-form {
+  width: 100%;
+}
+
+.contact-form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.contact-form-group {
+  flex: 1;
+  min-width: 0;
+  margin-bottom: 18px;
+}
+
+.contact-form-group label {
+  display: block;
+  color: #444653;
+  font-size: 12px;
+  font-weight: 650;
+  margin-bottom: 7px;
+}
+
+.contact-form-group label span {
+  color: #e14b4b;
+  margin-left: 3px;
+}
+
+.contact-form-group input,
+.contact-form-group select,
+.contact-form-group textarea {
+  width: 100%;
+  border: 1px solid #dfdde7;
+  background: #ffffff;
+  color: #30313d;
+  border-radius: 10px;
+  padding: 11px 13px;
+  box-sizing: border-box;
+  outline: none;
+  font-family: inherit;
+  font-size: 13px;
+  transition: 0.2s ease;
+}
+
+.contact-form-group input {
+  height: 44px;
+}
+
+.contact-form-group select {
+  height: 44px;
+  cursor: pointer;
+}
+
+.contact-form-group textarea {
+  resize: vertical;
+  min-height: 125px;
+  line-height: 1.5;
+}
+
+.contact-form-group input::placeholder,
+.contact-form-group textarea::placeholder {
+  color: #b1b2bd;
+}
+
+.contact-form-group input:focus,
+.contact-form-group select:focus,
+.contact-form-group textarea:focus {
+  border-color: #370dc6;
+  box-shadow: 0 0 0 3px rgba(55, 13, 198, 0.08);
+}
+
+.contact-error {
+  display: block;
+  color: #d94848;
+  font-size: 10px;
+  margin-top: 5px;
+}
+
+/* =====================================================
+   SUBMIT
+===================================================== */
+
+.contact-submit-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+.contact-submit-area p {
+  margin: 0;
+  color: #9294a1;
+  font-size: 10px;
+}
+
+.contact-submit-area p span {
+  color: #e14b4b;
+}
+
+.contact-submit-button {
+  min-height: 44px;
+  border: none;
+  border-radius: 10px;
+  background: #370dc6;
+  color: #ffffff;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.contact-submit-button:hover {
+  background: #2e0aa8;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(55, 13, 198, 0.2);
+}
+
+.contact-submit-button img {
+  width: 17px;
+  height: 17px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+/* =====================================================
+   FAQ
+===================================================== */
+
+.contact-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-faq-item {
+  border: 1px solid #e9e7ef;
+  border-radius: 11px;
+  overflow: hidden;
+  transition: 0.2s ease;
+}
+
+.contact-faq-item:hover {
+  border-color: #d9d3f3;
+}
+
+.contact-faq-open {
+  border-color: #cfc6f2;
+  background: #fbfaff;
+}
+
+.contact-faq-question {
+  width: 100%;
+  min-height: 52px;
+  padding: 12px 14px;
+  border: none;
+  background: transparent;
+  color: #373845;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  text-align: left;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contact-faq-arrow {
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
+  background: #eeeafd;
+  color: #370dc6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 17px;
+  line-height: 1;
+}
+
+.contact-faq-answer {
+  padding: 0 14px 14px;
+}
+
+.contact-faq-answer p {
+  margin: 0;
+  color: #7b7e90;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* =====================================================
+   HELP BOX
+===================================================== */
+
+.contact-help-box {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 13px;
+  background: #f5f2ff;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.contact-help-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-help-icon img {
+  width: 19px;
+  height: 19px;
+  object-fit: contain;
+}
+
+.contact-help-box strong {
+  display: block;
+  color: #37313f;
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+
+.contact-help-box p {
+  margin: 0;
+  color: #85818f;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+/* =====================================================
+   1100px
+===================================================== */
+
+@media (max-width: 1100px) {
+  .contact-info-cards {
+    flex-wrap: wrap;
+  }
+
+  .contact-info-card {
+    flex: 1 1 calc(50% - 9px);
+  }
+
+  .contact-main {
+    flex-direction: column;
+  }
+
+  .contact-form-card,
+  .contact-faq-card {
+    width: 100%;
+  }
+}
+
+/* =====================================================
+   800px
+===================================================== */
+
+@media (max-width: 800px) {
+  .contact-content {
+    padding: 22px 18px;
+  }
+
+  .contact-info-card {
+    flex: 1 1 100%;
+  }
+
+  .contact-form-row {
+    gap: 12px;
+  }
+}
+
+/* =====================================================
+   600px
+===================================================== */
+
+@media (max-width: 600px) {
+  .contact-content {
+    padding: 18px 13px;
+  }
+
+  .contact-header-left {
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .contact-page-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 13px;
+  }
+
+  .contact-page-icon img {
+    width: 23px;
+    height: 23px;
+  }
+
+  .contact-header h1 {
+    font-size: 23px;
+  }
+
+  .contact-header p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .contact-form-card,
+  .contact-faq-card {
+    padding: 18px;
+    border-radius: 16px;
+  }
+
+  .contact-form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .contact-submit-area {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .contact-submit-button {
+    width: 100%;
+  }
+}
+
+/* =====================================================
+   480px
+===================================================== */
+
+@media (max-width: 480px) {
+  .contact-info-card {
+    padding: 16px;
+  }
+
+  .contact-info-icon {
+    width: 43px;
+    height: 43px;
+  }
+
+  .contact-info-card strong {
+    font-size: 13px;
+  }
+
+  .contact-card-heading {
+    margin-bottom: 20px;
+  }
+
+  .contact-card-heading h2 {
+    font-size: 16px;
+  }
+
+  .contact-success-toast {
+    align-items: flex-start;
+  }
+
+  .contact-success-text span {
+    line-height: 1.4;
+  }
+}
+
+/* =====================================================
+   360px
+===================================================== */
+
+@media (max-width: 360px) {
+  .contact-content {
+    padding: 15px 10px;
+  }
+
+  .contact-form-card,
+  .contact-faq-card {
+    padding: 14px;
+  }
+
+  .contact-page-icon {
+    width: 41px;
+    height: 41px;
+  }
+
+  .contact-header h1 {
+    font-size: 20px;
+  }
+
+  .contact-info-card {
+    gap: 9px;
+  }
+
+  .contact-info-card strong {
+    font-size: 12px;
+  }
+
+  .contact-form-group input,
+  .contact-form-group select {
+    height: 42px;
+  }
+}

@@ -1,0 +1,375 @@
+.travel-topbar {
+  width: 100%;
+  min-height: 76px;
+
+  padding: 0 30px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e5e5ed;
+
+  display: flex;
+  align-items: center;
+
+  position: sticky;
+  top: 0;
+
+  z-index: 1000;
+
+  box-sizing: border-box;
+
+  box-shadow: 0 4px 18px rgba(55, 13, 198, 0.06);
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.travel-topbar-brand {
+  min-width: 190px;
+
+  display: flex;
+  flex-direction: column;
+
+  cursor: pointer;
+  user-select: none;
+
+  flex-shrink: 0;
+}
+
+.travel-logo {
+  color: #370dc6;
+
+  font-size: 25px;
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: -0.5px;
+}
+
+.travel-logo-subtitle {
+  margin-top: 5px;
+
+  color: #8a8da0;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.travel-topbar-navigation {
+  flex: 1;
+
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 5px;
+}
+
+
+/* =========================================================
+   NAVIGATION LINK
+========================================================= */
+
+.travel-topbar-link {
+  min-height: 46px;
+
+  padding: 0 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  border-radius: 10px;
+
+  text-decoration: none;
+
+  color: #6f7285;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  box-sizing: border-box;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.travel-topbar-link:hover {
+  color: #370dc6;
+
+  background: #f3f0ff;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   NAVIGATION ICON
+========================================================= */
+
+.travel-topbar-icon {
+  width: 20px;
+  height: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.travel-topbar-icon img {
+  width: 17px;
+  height: 17px;
+
+  object-fit: contain;
+
+  opacity: 0.65;
+
+  transition: opacity 0.25s ease;
+}
+
+.travel-topbar-link:hover .travel-topbar-icon img {
+  opacity: 1;
+}
+
+
+/* =========================================================
+   ACTIVE LINK
+========================================================= */
+
+.travel-topbar-link.active {
+  color: #370dc6;
+
+  background: #f0ecff;
+}
+
+.travel-topbar-link.active .travel-topbar-icon img {
+  opacity: 1;
+
+  filter:
+    brightness(0)
+    saturate(100%)
+    invert(19%)
+    sepia(89%)
+    saturate(4465%)
+    hue-rotate(255deg)
+    brightness(76%)
+    contrast(105%);
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.travel-mobile-menu-button {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  margin-left: auto;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #f2efff;
+
+  cursor: pointer;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.travel-mobile-menu-button:hover {
+  background: #e9e4ff;
+}
+
+.travel-mobile-menu-button img {
+  width: 21px;
+  height: 21px;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+========================================================= */
+
+@media (max-width: 1150px) {
+  .travel-topbar {
+    padding: 0 20px;
+  }
+
+  .travel-topbar-brand {
+    min-width: 155px;
+  }
+
+  .travel-logo {
+    font-size: 22px;
+  }
+
+  .travel-topbar-navigation {
+    gap: 2px;
+  }
+
+  .travel-topbar-link {
+    padding: 0 8px;
+
+    font-size: 12px;
+  }
+
+  .travel-topbar-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .travel-topbar-icon img {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .travel-topbar {
+    min-height: 70px;
+
+    padding: 0 20px;
+
+    position: sticky;
+    top: 0;
+  }
+
+  .travel-mobile-menu-button {
+    display: flex;
+  }
+
+  .travel-topbar-navigation {
+    position: absolute;
+
+    top: 70px;
+    left: 0;
+
+    width: 100%;
+
+    padding: 12px 20px 18px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e5e5ed;
+
+    box-shadow: 0 12px 25px rgba(35, 31, 70, 0.1);
+
+    display: none;
+
+    flex-direction: column;
+
+    align-items: stretch;
+    justify-content: flex-start;
+
+    gap: 5px;
+
+    box-sizing: border-box;
+  }
+
+  .travel-topbar-navigation.mobile-open {
+    display: flex;
+  }
+
+  .travel-topbar-link {
+    width: 100%;
+
+    min-height: 46px;
+
+    justify-content: flex-start;
+
+    padding: 0 15px;
+  }
+
+  .travel-topbar-title {
+    font-size: 14px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .travel-topbar {
+    min-height: 64px;
+
+    padding: 0 15px;
+  }
+
+  .travel-logo {
+    font-size: 21px;
+  }
+
+  .travel-logo-subtitle {
+    font-size: 7px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .travel-mobile-menu-button {
+    width: 39px;
+    height: 39px;
+  }
+
+  .travel-topbar-navigation {
+    top: 64px;
+
+    padding: 10px 15px 15px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+  .travel-topbar {
+    padding: 0 12px;
+  }
+
+  .travel-logo {
+    font-size: 19px;
+  }
+
+  .travel-topbar-link {
+    min-height: 43px;
+  }
+}

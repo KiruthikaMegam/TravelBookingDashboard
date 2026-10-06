@@ -1,0 +1,368 @@
+/* =========================================================
+   TRIP FORM
+========================================================= */
+
+.trip-form-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #f7f7fb;
+}
+
+.trip-form-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.trip-form-header {
+  margin-bottom: 25px;
+}
+
+.trip-form-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 0;
+
+  border: none;
+  background: transparent;
+
+  color: #370dc6;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.trip-form-back:hover {
+  text-decoration: underline;
+}
+
+.trip-form-header h1 {
+  margin: 13px 0 7px;
+
+  color: #20212a;
+
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.trip-form-header p {
+  margin: 0;
+
+  color: #7b7e90;
+
+  font-size: 14px;
+}
+
+/* =========================================================
+   FORM CARD
+========================================================= */
+
+.trip-form-card {
+  padding: 28px;
+
+  border: 1px solid #e8e6ef;
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow: 0 6px 24px rgba(31, 35, 50, 0.04);
+}
+
+/* =========================================================
+   FORM SECTION
+========================================================= */
+
+.trip-form-section {
+  margin-bottom: 30px;
+}
+
+.trip-form-section:last-child {
+  margin-bottom: 0;
+}
+
+.trip-form-section-title {
+  margin: 0 0 18px;
+
+  color: #20212a;
+
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.trip-form-section-title::after {
+  content: "";
+
+  display: block;
+
+  width: 35px;
+  height: 3px;
+
+  margin-top: 7px;
+
+  border-radius: 10px;
+
+  background: #370dc6;
+}
+
+/* =========================================================
+   FORM ROW
+========================================================= */
+
+.trip-form-row {
+  display: flex;
+  gap: 18px;
+
+  margin-bottom: 18px;
+}
+
+.trip-form-group {
+  flex: 1;
+  min-width: 0;
+}
+
+.trip-form-group.full {
+  width: 100%;
+}
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.trip-form-group label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #353643;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.trip-required {
+  color: #dc2626;
+}
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+.trip-form-group input,
+.trip-form-group select,
+.trip-form-group textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 12px 13px;
+
+  border: 1px solid #dfdde8;
+  border-radius: 9px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #30313d;
+
+  font-family: inherit;
+  font-size: 13px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.trip-form-group input,
+.trip-form-group select {
+  height: 45px;
+}
+
+.trip-form-group textarea {
+  min-height: 120px;
+
+  resize: vertical;
+
+  line-height: 1.5;
+}
+
+.trip-form-group input:focus,
+.trip-form-group select:focus,
+.trip-form-group textarea:focus {
+  border-color: #370dc6;
+
+  box-shadow: 0 0 0 3px rgba(55, 13, 198, 0.08);
+}
+
+.trip-form-group input::placeholder,
+.trip-form-group textarea::placeholder {
+  color: #a1a2af;
+}
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.trip-form-error {
+  margin: 6px 0 0;
+
+  color: #dc2626;
+
+  font-size: 11px;
+}
+
+/* =========================================================
+   IMAGE PREVIEW
+========================================================= */
+
+.trip-image-preview {
+  width: 100%;
+  max-width: 260px;
+  height: 150px;
+
+  margin-top: 12px;
+
+  overflow: hidden;
+
+  border: 1px solid #e8e6ef;
+  border-radius: 10px;
+
+  background: #f4f4f8;
+}
+
+.trip-image-preview img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+/* =========================================================
+   FORM ACTIONS
+========================================================= */
+
+.trip-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+
+  margin-top: 28px;
+  padding-top: 22px;
+
+  border-top: 1px solid #eeeef3;
+}
+
+.trip-form-cancel,
+.trip-form-submit {
+  min-width: 120px;
+  min-height: 43px;
+
+  padding: 0 18px;
+
+  border-radius: 9px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.trip-form-cancel {
+  border: 1px solid #dddbe6;
+
+  background: #ffffff;
+
+  color: #606272;
+}
+
+.trip-form-cancel:hover {
+  background: #f6f6f9;
+}
+
+.trip-form-submit {
+  border: 1px solid #370dc6;
+
+  background: #370dc6;
+
+  color: #ffffff;
+}
+
+.trip-form-submit:hover {
+  background: #2d09a7;
+
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .trip-form-content {
+    padding: 20px 16px;
+  }
+
+  .trip-form-card {
+    padding: 20px;
+  }
+
+  .trip-form-row {
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 0;
+  }
+
+  .trip-form-group {
+    margin-bottom: 18px;
+  }
+
+  .trip-form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .trip-form-cancel,
+  .trip-form-submit {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .trip-form-content {
+    padding: 16px 12px;
+  }
+
+  .trip-form-header h1 {
+    font-size: 23px;
+  }
+
+  .trip-form-card {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .trip-form-group input,
+  .trip-form-group select {
+    height: 43px;
+  }
+
+  .trip-form-group textarea {
+    min-height: 110px;
+  }
+}

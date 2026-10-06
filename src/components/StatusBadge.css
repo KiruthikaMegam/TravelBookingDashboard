@@ -1,0 +1,109 @@
+.travel-status-badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  min-height: 28px;
+
+  padding: 4px 10px;
+
+  border-radius: 20px;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  box-sizing: border-box;
+}
+
+.travel-status-dot {
+  width: 6px;
+  height: 6px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+}
+
+/* SUCCESS */
+
+.travel-status-badge.success {
+  color: #16834f;
+
+  background: #e9f8f0;
+}
+
+.travel-status-badge.success .travel-status-dot {
+  background: #20a464;
+}
+
+/* WARNING */
+
+.travel-status-badge.warning {
+  color: #a56a00;
+
+  background: #fff5dd;
+}
+
+.travel-status-badge.warning .travel-status-dot {
+  background: #f5a623;
+}
+
+/* DANGER */
+
+.travel-status-badge.danger {
+  color: #d33e3e;
+
+  background: #fdecec;
+}
+
+.travel-status-badge.danger .travel-status-dot {
+  background: #e55353;
+}
+
+/* INFO */
+
+.travel-status-badge.info {
+  color: #2867a7;
+
+  background: #eaf3fc;
+}
+
+.travel-status-badge.info .travel-status-dot {
+  background: #4d91d1;
+}
+
+/* DEFAULT */
+
+.travel-status-badge.default {
+  color: #666a7a;
+
+  background: #f0f0f3;
+}
+
+.travel-status-badge.default .travel-status-dot {
+  background: #8a8d9a;
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+  .travel-status-badge {
+    min-height: 26px;
+
+    padding: 4px 8px;
+
+    gap: 6px;
+
+    font-size: 10px;
+  }
+
+  .travel-status-dot {
+    width: 5px;
+    height: 5px;
+  }
+}

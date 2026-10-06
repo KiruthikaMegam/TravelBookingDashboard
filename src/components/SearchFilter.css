@@ -1,0 +1,497 @@
+/* =========================================================
+   SEARCH FILTER
+========================================================= */
+
+.travel-search-filter {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 15px;
+
+  background: #ffffff;
+
+  border: 1px solid #e7e5ee;
+  border-radius: 14px;
+
+  box-shadow: 0 4px 15px rgba(38, 25, 92, 0.04);
+
+  box-sizing: border-box;
+
+  position: relative;
+
+  z-index: 20;
+
+  overflow: visible;
+}
+
+
+/* =========================================================
+   SEARCH BOX
+========================================================= */
+
+.travel-search-box {
+  flex: 1;
+
+  min-width: 220px;
+
+  height: 43px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0 13px;
+
+  background: #f8f8fb;
+
+  border: 1px solid #e6e5ec;
+
+  border-radius: 10px;
+
+  box-sizing: border-box;
+
+  transition: 0.25s ease;
+}
+
+.travel-search-box:focus-within {
+  background: #ffffff;
+
+  border-color: #370dc6;
+
+  box-shadow: 0 0 0 3px rgba(55, 13, 198, 0.08);
+}
+
+
+/* SEARCH ICON */
+
+.travel-search-box img {
+  width: 17px;
+  height: 17px;
+
+  object-fit: contain;
+
+  opacity: 0.55;
+
+  flex-shrink: 0;
+}
+
+
+/* SEARCH INPUT */
+
+.travel-search-box input {
+  width: 100%;
+
+  min-width: 0;
+
+  height: 100%;
+
+  padding: 0;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #292b35;
+
+  font-size: 13px;
+
+  font-family: inherit;
+
+  box-sizing: border-box;
+}
+
+.travel-search-box input::placeholder {
+  color: #9b9dab;
+}
+
+.travel-search-box input:focus {
+  outline: none;
+}
+
+
+/* =========================================================
+   FILTER AREA
+========================================================= */
+
+.travel-filter-area {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 8px;
+
+  flex-wrap: wrap;
+
+  position: relative;
+
+  z-index: 30;
+
+  overflow: visible;
+}
+
+
+/* =========================================================
+   FILTER ITEM
+========================================================= */
+
+.travel-filter-item {
+  height: 43px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 0 10px;
+
+  background: #f8f8fb;
+
+  border: 1px solid #e6e5ec;
+
+  border-radius: 10px;
+
+  box-sizing: border-box;
+
+  position: relative;
+
+  z-index: 40;
+
+  transition: 0.25s ease;
+}
+
+.travel-filter-item:hover {
+  background: #ffffff;
+
+  border-color: #d8d2f5;
+}
+
+.travel-filter-item:focus-within {
+  background: #ffffff;
+
+  border-color: #370dc6;
+
+  box-shadow: 0 0 0 3px rgba(55, 13, 198, 0.08);
+}
+
+
+/* =========================================================
+   FILTER ICON
+========================================================= */
+
+.travel-filter-item img {
+  width: 15px;
+  height: 15px;
+
+  object-fit: contain;
+
+  opacity: 0.55;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   SELECT
+========================================================= */
+
+.travel-filter-item select {
+  min-width: 120px;
+
+  height: 40px;
+
+  padding: 0 28px 0 0;
+
+  border: none;
+
+  outline: none;
+
+  background-color: transparent;
+
+  color: #5f6272;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  font-family: inherit;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  appearance: auto;
+}
+
+.travel-filter-item select:focus {
+  outline: none;
+}
+
+
+/* OPTION */
+
+.travel-filter-item select option {
+  padding: 10px;
+
+  background: #ffffff;
+
+  color: #292b35;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   CLEAR BUTTON
+========================================================= */
+
+.travel-clear-filter-button {
+  height: 43px;
+
+  padding: 0 15px;
+
+  border: 1px solid #ded9f5;
+
+  border-radius: 10px;
+
+  background: #f3f0ff;
+
+  color: #370dc6;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  font-family: inherit;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition: 0.25s ease;
+
+  box-sizing: border-box;
+}
+
+.travel-clear-filter-button:hover {
+  background: #370dc6;
+
+  border-color: #370dc6;
+
+  color: #ffffff;
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 5px 12px rgba(55, 13, 198, 0.18);
+}
+
+.travel-clear-filter-button:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .travel-search-filter {
+    align-items: stretch;
+
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
+  .travel-search-box {
+    width: 100%;
+
+    flex: none;
+  }
+
+  .travel-filter-area {
+    width: 100%;
+
+    justify-content: flex-start;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .travel-search-filter {
+    padding: 13px;
+
+    gap: 12px;
+  }
+
+  .travel-search-box {
+    height: 44px;
+
+    min-width: 0;
+  }
+
+  .travel-filter-area {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 8px;
+  }
+
+  .travel-filter-item {
+    width: 100%;
+
+    min-width: 0;
+
+    height: 43px;
+  }
+
+  .travel-filter-item select {
+    width: 100%;
+
+    min-width: 0;
+
+    flex: 1;
+  }
+
+  .travel-clear-filter-button {
+    width: 100%;
+
+    min-width: 0;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL TABLET
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .travel-search-filter {
+    padding: 12px;
+
+    border-radius: 12px;
+  }
+
+  .travel-filter-area {
+    grid-template-columns: 1fr;
+  }
+
+  .travel-filter-item {
+    width: 100%;
+  }
+
+  .travel-clear-filter-button {
+    width: 100%;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .travel-search-filter {
+    padding: 10px;
+
+    gap: 10px;
+  }
+
+  .travel-search-box {
+    height: 42px;
+
+    padding: 0 11px;
+  }
+
+  .travel-search-box img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .travel-search-box input {
+    font-size: 12px;
+  }
+
+  .travel-filter-area {
+    gap: 8px;
+  }
+
+  .travel-filter-item {
+    height: 42px;
+
+    padding: 0 9px;
+
+    border-radius: 9px;
+  }
+
+  .travel-filter-item img {
+    width: 14px;
+    height: 14px;
+  }
+
+  .travel-filter-item select {
+    height: 39px;
+
+    font-size: 12px;
+  }
+
+  .travel-clear-filter-button {
+    height: 42px;
+
+    font-size: 12px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .travel-search-filter {
+    padding: 9px;
+  }
+
+  .travel-search-box {
+    min-width: 0;
+  }
+
+  .travel-filter-item {
+    padding: 0 8px;
+  }
+
+  .travel-filter-item select {
+    font-size: 11px;
+  }
+
+  .travel-clear-filter-button {
+    font-size: 11px;
+  }
+
+}

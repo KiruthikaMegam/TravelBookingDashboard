@@ -1,0 +1,561 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.loginPage {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  background: #f5f4fb;
+}
+
+/* ========================================
+   LEFT SIDE
+======================================== */
+
+.leftSide {
+  width: 55%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: #370dc6;
+}
+
+.leftSide img {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: block;
+  object-fit: cover;
+}
+
+/* Image overlay */
+
+.leftSide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(55, 13, 198, 0.05),
+    rgba(20, 5, 75, 0.78)
+  );
+  pointer-events: none;
+}
+
+/* ========================================
+   TRAVEL OVERLAY
+======================================== */
+
+.travelOverlay {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  width: 100%;
+  padding: 80px 60px 55px;
+  color: #ffffff;
+  background: linear-gradient(
+    to top,
+    rgba(25, 7, 85, 0.85),
+    transparent
+  );
+}
+
+.travelOverlay h2 {
+  margin-bottom: 12px;
+  color: #ffffff;
+  font-size: 44px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.travelOverlay p {
+  max-width: 560px;
+  color: #f0edff;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* ========================================
+   RIGHT SIDE
+======================================== */
+
+.rightSide {
+  width: 45%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 45px;
+  background: #ffffff;
+  overflow-y: auto;
+}
+
+.loginForm {
+  width: 100%;
+  max-width: 470px;
+  animation: loginAnimation 0.5s ease;
+}
+
+/* ========================================
+   LOGO
+======================================== */
+
+.loginForm h1 {
+  margin-bottom: 28px;
+  color: #370dc6;
+  font-size: 35px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+/* ========================================
+   HEADING
+======================================== */
+
+.loginForm h2 {
+  margin-bottom: 8px;
+  color: #19142d;
+  font-size: 28px;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.subtitle {
+  margin-bottom: 28px;
+  color: #77718b;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ========================================
+   INPUT
+======================================== */
+
+.loginForm form {
+  width: 100%;
+}
+
+.inputGroup {
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+.inputGroup label {
+  display: block;
+  margin-bottom: 7px;
+  color: #302b42;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.inputGroup input {
+  width: 100%;
+  height: 48px;
+  padding: 0 15px;
+
+  border: 1px solid #ddd8ee;
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #faf9fd;
+  color: #19142d;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  transition: all 0.3s ease;
+}
+
+.inputGroup input:hover {
+  border-color: #b9aceb;
+}
+
+.inputGroup input:focus {
+  border-color: #370dc6;
+  background: #ffffff;
+
+  box-shadow: 0 0 0 3px rgba(55, 13, 198, 0.10);
+}
+
+.inputGroup input::placeholder {
+  color: #aaa4b9;
+}
+
+/* ========================================
+   ERROR MESSAGE
+======================================== */
+
+.errorMessage {
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 11px 14px;
+
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+
+  background: #fff1f2;
+  color: #dc2626;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* ========================================
+   SUCCESS MESSAGE
+======================================== */
+
+.successMessage {
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 11px 14px;
+
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+
+  background: #f0fdf4;
+  color: #15803d;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* ========================================
+   LOGIN BUTTON
+======================================== */
+
+.loginButton {
+  width: 100%;
+  height: 50px;
+  margin-top: 5px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #370dc6;
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.loginButton:hover {
+  background: #2d0aa3;
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(55, 13, 198, 0.25);
+}
+
+.loginButton:active {
+  transform: translateY(0);
+}
+
+/* ========================================
+   SWITCH LOGIN / SIGNUP
+======================================== */
+
+.switchAccount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 6px;
+  margin-top: 24px;
+
+  color: #77718b;
+
+  font-size: 14px;
+  text-align: center;
+}
+
+.switchButton {
+  padding: 0;
+
+  border: none;
+  background: transparent;
+
+  color: #370dc6;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.switchButton:hover {
+  color: #2d0aa3;
+  text-decoration: underline;
+}
+
+/* ========================================
+   ANIMATION
+======================================== */
+
+@keyframes loginAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1100px) {
+  .leftSide {
+    width: 48%;
+  }
+
+  .rightSide {
+    width: 52%;
+    padding: 35px;
+  }
+
+  .travelOverlay {
+    padding: 70px 40px 45px;
+  }
+
+  .travelOverlay h2 {
+    font-size: 36px;
+  }
+
+  .travelOverlay p {
+    font-size: 14px;
+  }
+
+  .loginForm {
+    max-width: 430px;
+  }
+}
+
+/* ========================================
+   SMALL TABLET
+======================================== */
+
+@media (max-width: 850px) {
+  .leftSide {
+    width: 42%;
+  }
+
+  .rightSide {
+    width: 58%;
+    padding: 30px;
+  }
+
+  .travelOverlay {
+    padding: 60px 28px 35px;
+  }
+
+  .travelOverlay h2 {
+    font-size: 30px;
+  }
+
+  .travelOverlay p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .loginForm h1 {
+    font-size: 31px;
+  }
+
+  .loginForm h2 {
+    font-size: 25px;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+  .loginPage {
+    display: block;
+    min-height: 100vh;
+  }
+
+  .leftSide {
+    width: 100%;
+    height: 250px;
+    min-height: 250px;
+  }
+
+  .leftSide img {
+    width: 100%;
+    height: 250px;
+    min-height: 250px;
+  }
+
+  .travelOverlay {
+    padding: 60px 25px 25px;
+  }
+
+  .travelOverlay h2 {
+    margin-bottom: 6px;
+    font-size: 27px;
+  }
+
+  .travelOverlay p {
+    max-width: 100%;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .rightSide {
+    width: 100%;
+    min-height: auto;
+
+    padding: 35px 22px 45px;
+
+    align-items: flex-start;
+  }
+
+  .loginForm {
+    max-width: 100%;
+  }
+
+  .loginForm h1 {
+    margin-bottom: 22px;
+    font-size: 30px;
+  }
+
+  .loginForm h2 {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    margin-bottom: 24px;
+  }
+
+  .inputGroup {
+    margin-bottom: 16px;
+  }
+
+  .inputGroup input {
+    height: 48px;
+  }
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+  .leftSide {
+    height: 220px;
+    min-height: 220px;
+  }
+
+  .leftSide img {
+    height: 220px;
+    min-height: 220px;
+  }
+
+  .travelOverlay {
+    padding: 50px 20px 22px;
+  }
+
+  .travelOverlay h2 {
+    font-size: 24px;
+  }
+
+  .travelOverlay p {
+    font-size: 12px;
+  }
+
+  .rightSide {
+    padding: 30px 18px 40px;
+  }
+
+  .loginForm h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+  }
+
+  .loginForm h2 {
+    font-size: 22px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+  }
+
+  .inputGroup label {
+    font-size: 13px;
+  }
+
+  .inputGroup input {
+    height: 46px;
+    font-size: 13px;
+  }
+
+  .loginButton {
+    height: 48px;
+    font-size: 14px;
+  }
+
+  .switchAccount {
+    flex-direction: column;
+    gap: 5px;
+    font-size: 13px;
+  }
+
+  .switchButton {
+    font-size: 13px;
+  }
+}
+
+/* ========================================
+   VERY SMALL MOBILE
+======================================== */
+
+@media (max-width: 350px) {
+  .leftSide {
+    height: 190px;
+    min-height: 190px;
+  }
+
+  .leftSide img {
+    height: 190px;
+    min-height: 190px;
+  }
+
+  .travelOverlay h2 {
+    font-size: 21px;
+  }
+
+  .travelOverlay p {
+    display: none;
+  }
+
+  .rightSide {
+    padding: 25px 15px 35px;
+  }
+
+  .loginForm h1 {
+    font-size: 26px;
+  }
+
+  .loginForm h2 {
+    font-size: 20px;
+  }
+}

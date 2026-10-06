@@ -1,0 +1,175 @@
+.travel-stat-card {
+  width: 100%;
+
+  background: #ffffff;
+
+  border: 1px solid #e8e6ef;
+  border-radius: 16px;
+
+  padding: 22px;
+
+  min-height: 145px;
+
+  box-sizing: border-box;
+
+  box-shadow: 0 5px 18px rgba(38, 25, 92, 0.05);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.travel-stat-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 12px 28px rgba(55, 13, 198, 0.1);
+}
+
+.travel-stat-card-top {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+}
+
+.travel-stat-card-icon {
+  width: 46px;
+  height: 46px;
+
+  flex-shrink: 0;
+
+  border-radius: 12px;
+
+  background: #f0ecff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.travel-stat-card-icon img {
+  width: 23px;
+  height: 23px;
+
+  object-fit: contain;
+
+  filter:
+    brightness(0)
+    saturate(100%)
+    invert(19%)
+    sepia(89%)
+    saturate(4465%)
+    hue-rotate(255deg)
+    brightness(76%)
+    contrast(105%);
+}
+
+.travel-stat-change {
+  padding: 5px 9px;
+
+  border-radius: 20px;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.travel-stat-change.positive {
+  color: #16834f;
+  background: #e9f8f0;
+}
+
+.travel-stat-change.negative {
+  color: #d33e3e;
+  background: #fdecec;
+}
+
+.travel-stat-change.warning {
+  color: #a56a00;
+  background: #fff5dd;
+}
+
+.travel-stat-content {
+  margin-top: 17px;
+
+  min-width: 0;
+}
+
+.travel-stat-title {
+  margin: 0;
+
+  color: #7b7e90;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  line-height: 1.4;
+}
+
+.travel-stat-value {
+  margin: 5px 0 0;
+
+  color: #20212a;
+
+  font-size: 25px;
+  font-weight: 800;
+
+  line-height: 1.2;
+
+  overflow-wrap: anywhere;
+}
+
+.travel-stat-description {
+  margin: 5px 0 0;
+
+  color: #999cab;
+
+  font-size: 11px;
+
+  line-height: 1.5;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .travel-stat-card {
+    padding: 19px;
+
+    min-height: 135px;
+  }
+
+  .travel-stat-value {
+    font-size: 22px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .travel-stat-card {
+    padding: 18px;
+
+    border-radius: 14px;
+  }
+
+  .travel-stat-card-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .travel-stat-card-icon img {
+    width: 21px;
+    height: 21px;
+  }
+
+  .travel-stat-value {
+    font-size: 21px;
+  }
+
+  .travel-stat-title {
+    font-size: 12px;
+  }
+}
