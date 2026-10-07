@@ -22,7 +22,7 @@ import editIcon from "../assets/edit.png";
 import deleteIcon from "../assets/redDelete.png";
 import locationIcon from "../assets/location.png";
 import Destination from "../assets/topDestination.png";
-import ActiveLocation from "../assets/activelocation.png";
+import ActiveLocation from "../assets/activeLocation.png";
 import Revenue from "../assets/revenue.png";
 
 function Destinations() {
