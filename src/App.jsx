@@ -81,7 +81,7 @@ function App() {
         <Route path="/analytics" element={<Analytics />} />
 
         {/* Contact Us */}
-        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/contactUs" element={<ContactUs />} />
 
       </Routes>
     </BrowserRouter>
