@@ -21,7 +21,6 @@ import viewIcon from "../assets/view.png";
 import editIcon from "../assets/edit.png";
 import deleteIcon from "../assets/redDelete.png";
 import locationIcon from "../assets/location.png";
-import priceIcon from "../assets/price.png";
 import Destination from "../assets/topDestination.png";
 import ActiveLocation from "../assets/activelocation.png";
 import Revenue from "../assets/revenue.png";
@@ -227,7 +226,7 @@ function Destinations() {
           <button
             type="button"
             className="destination-add-button"
-            onClick={() => navigate("/Destinations/add")}
+            onClick={() => navigate("/destinations/add")}
           >
             <img src={plusIcon} alt="" />
             <span>Add Destination</span>
@@ -480,7 +479,7 @@ function Destinations() {
                         className="destination-view-button"
                         onClick={() =>
                           navigate(
-                            `/Destinations/View/${destination.id}`
+                            `/destinations/View/${destination.id}`
                           )
                         }
                       >
@@ -496,7 +495,7 @@ function Destinations() {
                         className="destination-edit-button"
                         onClick={() =>
                           navigate(
-                            `/Destinations/Edit/${destination.id}`
+                            `/destinations/Edit/${destination.id}`
                           )
                         }
                       >

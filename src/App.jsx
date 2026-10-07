@@ -33,7 +33,7 @@ import Calendar from "./pages/Calendar";
 import Analytics from "./pages/Analytics";
 import ContactUs from "./pages/ContactUs";
 
-export default function App() {
+function App() {
   return (
     <BrowserRouter>
       <Routes>
@@ -42,49 +42,50 @@ export default function App() {
         <Route path="/" element={<Login />} />
 
         {/* Dashboard */}
-        <Route path="/Dashboard" element={<Dashboard />} />
+        <Route path="/dashboard" element={<Dashboard />} />
 
         {/* Bookings */}
-        <Route path="/Bookings" element={<Bookings />} />
-        <Route path="/Bookings/add" element={<BookingAdd />} />
-        <Route path="/Bookings/edit/:id" element={<BookingEdit />} />
-        <Route path="/Bookings/view/:id" element={<BookingView />} />
+        <Route path="/bookings" element={<Bookings />} />
+        <Route path="/bookings/add" element={<BookingAdd />} />
+        <Route path="/bookings/edit/:id" element={<BookingEdit />} />
+        <Route path="/bookings/view/:id" element={<BookingView />} />
 
         {/* Customers */}
-        <Route path="/Customers" element={<Customers />} />
-        <Route path="/Customers/view/:id" element={<CustomerView />} />
-        <Route path="/Customers/add" element={<CustomerAdd />}/>
-        <Route path="/Customers/edit/:id" element={<CustomerEdit />}/>
+        <Route path="/customers" element={<Customers />} />
+        <Route path="/customers/add" element={<CustomerAdd />} />
+        <Route path="/customers/edit/:id" element={<CustomerEdit />} />
+        <Route path="/customers/view/:id" element={<CustomerView />} />
 
         {/* Destinations */}
-        <Route path="/Destinations" element={<Destinations />} />
-        <Route path="/Destinations/add" element={<DestinationAdd />}/>
-        <Route path="/Destinations/edit/:id" element={<DestinationEdit />}/>
-        <Route path="/Destinations/view/:id" element={<DestinationView />}/>
+        <Route path="/destinations" element={<Destinations />} />
+        <Route path="/destinations/add" element={<DestinationAdd />} />
+        <Route path="/destinations/edit/:id" element={<DestinationEdit />} />
+        <Route path="/destinations/view/:id" element={<DestinationView />} />
 
         {/* Trips */}
-        <Route path="/Trips" element={<Trips />} />
-        <Route path="/Trips/add" element={<TripAdd />} />
-        <Route path="/Trips/edit/:id" element={<TripEdit />} />
-        <Route path="/Trips/view/:id" element={<TripView />} />
+        <Route path="/trips" element={<Trips />} />
+        <Route path="/trips/add" element={<TripAdd />} />
+        <Route path="/trips/edit/:id" element={<TripEdit />} />
+        <Route path="/trips/view/:id" element={<TripView />} />
 
         {/* Payments */}
-        <Route path="/Payments" element={<Payments />} />
-        <Route path="/Payments/view/:id" element={<PaymentView />} />
-        <Route path="/Payments" element={<Payments />} />
-        <Route path="/Payments/add" element={<PaymentAdd />} />
-        <Route path="/Payments/edit/:id" element={<PaymentEdit />} />
+        <Route path="/payments" element={<Payments />} />
+        <Route path="/payments/add" element={<PaymentAdd />} />
+        <Route path="/payments/edit/:id" element={<PaymentEdit />} />
+        <Route path="/payments/view/:id" element={<PaymentView />} />
 
         {/* Calendar */}
-        <Route path="/Calendar" element={<Calendar />} />
+        <Route path="/calendar" element={<Calendar />} />
 
         {/* Analytics */}
-        <Route path="/Analytics" element={<Analytics />} />
+        <Route path="/analytics" element={<Analytics />} />
 
         {/* Contact Us */}
-        <Route path="/ContactUs" element={<ContactUs />} />
+        <Route path="/contact-us" element={<ContactUs />} />
 
       </Routes>
     </BrowserRouter>
   );
 }
+
+export default App;
